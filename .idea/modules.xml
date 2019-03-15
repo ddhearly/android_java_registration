@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/2.1-okhttp_registration_prod.iml" filepath="$PROJECT_DIR$/2.1-okhttp_registration_prod.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyFirstApplication.iml" filepath="$PROJECT_DIR$/MyFirstApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android_java_registration.iml" filepath="$PROJECT_DIR$/android_java_registration.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

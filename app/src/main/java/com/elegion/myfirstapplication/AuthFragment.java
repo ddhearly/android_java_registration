@@ -35,9 +35,6 @@ public class AuthFragment extends Fragment {
     private EditText mPassword;
     private Button mEnter;
     private Button mRegister;
-    private SharedPreferencesHelper mSharedPreferencesHelper;
-
-    private ArrayAdapter<String> mEmailedUsersAdapter;
 
     public static AuthFragment newInstance() {
         Bundle args = new Bundle();
@@ -143,8 +140,6 @@ public class AuthFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fr_auth, container, false);
 
-        mSharedPreferencesHelper = new SharedPreferencesHelper(getActivity());
-
         mEmail = v.findViewById(R.id.etEmail);
         mPassword = v.findViewById(R.id.etPassword);
         mEnter = v.findViewById(R.id.buttonEnter);
@@ -153,13 +148,6 @@ public class AuthFragment extends Fragment {
         mEnter.setOnClickListener(mOnEnterClickListener);
         mRegister.setOnClickListener(mOnRegisterClickListener);
         mEmail.setOnFocusChangeListener(mOnEmailFocusChangeListener);
-
-        mEmailedUsersAdapter = new ArrayAdapter<>(
-                getActivity(),
-                android.R.layout.simple_dropdown_item_1line,
-                mSharedPreferencesHelper.getSuccessEmails()
-        );
-        mEmail.setAdapter(mEmailedUsersAdapter);
 
         return v;
     }

@@ -14,11 +14,6 @@ public class User implements Serializable {
 
     private boolean mHasSuccessEmail;
 
-    public User(String email, String password) {
-        mEmail = email;
-        mPassword = password;
-    }
-
     public User(String email, String name, String password) {
         mEmail = email;
         mName = name;
